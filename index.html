@@ -12,5 +12,72 @@
     <script defer src="./src/scripts/main.js"></script>
     <title>Password Generator</title>
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <h1 id="title">Password Generator</h1>
+      <div id="result-container">
+        <input type="text" readonly id="result" tabindex="-1" />
+        <button
+          type="button"
+          id="copy-to-clipboard-button"
+          aria-label="Copy generated password to clipboard"
+        >
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-clipboard"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"
+            />
+            <path
+              d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="settings-container">
+        <div class="field">
+          <label for="password-length-input">Password length</label>
+          <input
+            type="number"
+            value="4"
+            min="4"
+            max="19"
+            id="password-length-input"
+          />
+        </div>
+        <div class="field">
+          <label for="include-uppercase-letters-checkbox"
+            >Include uppercase letters</label
+          >
+          <input type="checkbox" id="include-uppercase-letters-checkbox" />
+        </div>
+        <div class="field">
+          <label for="include-lowercase-letters-checkbox"
+            >Include lowercase letters</label
+          >
+          <input type="checkbox" id="include-lowercase-letters-checkbox" />
+        </div>
+        <div class="field">
+          <label for="include-numbers-checkbox">Include numbers</label>
+          <input type="checkbox" id="include-numbers-checkbox" />
+        </div>
+        <div class="field">
+          <label for="include-symbols-checkbox">Include symbols</label>
+          <input type="checkbox" id="include-symbols-checkbox" />
+        </div>
+      </div>
+      <button id="generate-password-button">Generate password</button>
+    </div>
+  </body>
 </html>
