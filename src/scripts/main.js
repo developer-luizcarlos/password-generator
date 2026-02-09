@@ -25,4 +25,24 @@ const generatePasswordButton = document.getElementById(
 // Listeners
 generatePasswordButton.addEventListener("click", () => {
   const password = generatePassword();
+
+  resultInput.value = password;
+});
+
+copyToClipboardButton.addEventListener("click", () => {
+  const passwordWasGenerated = resultInput.value.trim() !== "";
+
+  if (!passwordWasGenerated) {
+    return;
+  }
+
+  const password = resultInput.value.trim();
+
+  try {
+    navigator.clipboard.writeText(password);
+
+    alert("Copied with success!");
+  } catch (error) {
+    alert(`An error happened: ${error.message}`);
+  }
 });
