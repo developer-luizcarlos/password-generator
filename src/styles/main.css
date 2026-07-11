@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -10,4 +12,140 @@ body,
 html {
   height: 100vh;
   width: 100vw;
+}
+
+body {
+  background-color: #2b2b2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.generator {
+  background-color: #191919;
+  border-radius: 10px;
+  color: #f0e7d8;
+  min-height: 500px;
+  min-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 25px;
+}
+
+.title {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.output-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+  width: 400px;
+}
+
+.output-container > .btn {
+  width: 100px;
+}
+
+.output {
+  background-color: #2b2b2a;
+  border-radius: 3px;
+  height: 45px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.btn {
+  background-color: #00ad5a;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #1b1d1e;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn--generate {
+  width: 250px;
+}
+
+.options-container {
+  display: grid;
+  row-gap: 10px;
+  width: 400px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.input {
+  background-color: #353433;
+  border: none;
+  border-radius: 3px;
+  color: #f0e7d8;
+  font-size: 1rem;
+  text-align: center;
+  height: 35px;
+  width: 85px;
+}
+
+.switch {
+  background-color: #353433;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 35px;
+  width: 85px;
+  position: relative;
+}
+
+.thumb {
+  background-color: #222222;
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  pointer-events: none;
+}
+
+.switch:has(input[type="checkbox"]:checked) {
+  background-color: #33b55e;
+}
+
+.switch:has(input[type="checkbox"]:checked) .thumb {
+  left: 55px;
 }

@@ -6,7 +6,64 @@
     <meta name="description" content="A password generator for the Web" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="./src/styles/main.css" />
+    <link rel="stylesheet" href="./src/styles/media.css" />
     <script type="module" src="./src/scripts/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <article class="generator">
+      <h1 class="title">password generator</h1>
+      <div class="output-container">
+        <output class="output">11072004</output>
+        <button class="btn btn--copy" aria-label="copy generated password">
+          Copy
+        </button>
+      </div>
+      <div class="options-container">
+        <div class="option">
+          <label for="chars-quantity" class="label">Characters quantity</label>
+          <input
+            type="number"
+            min="4"
+            max="16"
+            value="4"
+            class="input"
+            id="chars-quantity"
+          />
+        </div>
+        <div class="option">
+          <label for="include-symbols" class="label">Include symbols</label>
+          <div class="switch" role="switch">
+            <span class="thumb"></span>
+            <input type="checkbox" id="include-symbols" />
+          </div>
+        </div>
+        <div class="option">
+          <label for="include-numbers" class="label">Include numbers</label>
+          <div class="switch" role="switch">
+            <span class="thumb"></span>
+            <input type="checkbox" id="include-numbers" />
+          </div>
+        </div>
+        <div class="option">
+          <label for="include-lowercase" class="label"
+            >Include lowercase letters</label
+          >
+          <div class="switch" role="switch">
+            <span class="thumb"></span>
+            <input type="checkbox" id="include-lowercase" />
+          </div>
+        </div>
+        <div class="option">
+          <label for="include-uppercase" class="label"
+            >Incluse uppercase letters</label
+          >
+          <div class="switch" role="switch">
+            <span class="thumb"></span>
+            <input type="checkbox" id="include-uppercase" />
+          </div>
+        </div>
+      </div>
+      <button class="btn btn--generate">Generate Password</button>
+    </article>
+  </body>
 </html>
