@@ -1,12 +1,8 @@
 export default function handleSwitchClick(e) {
-  if (!e.target.classList.contains("switch")) {
-    return;
-  }
+  const switchEl = e.currentTarget;
+  const checkbox = switchEl.querySelector("input[type='checkbox']");
 
-  const element = e.currentTarget;
-  const innerCheckbox = element.querySelector("input[type='checkbox']");
+  const isChecked = checkbox.checked;
 
-  const isChecked = innerCheckbox.checked;
-
-  innerCheckbox.checked = !isChecked;
+  checkbox.checked = !isChecked;
 }
