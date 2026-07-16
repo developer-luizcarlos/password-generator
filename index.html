@@ -10,10 +10,15 @@
     <script type="module" src="./src/scripts/main.js"></script>
   </head>
   <body>
+    <div role="status" id="notification" class="notification">
+      <p class="notification__msg"></p>
+      <button aria-controls="notification" class="btn btn--confirm">OK</button>
+    </div>
+
     <article class="generator">
       <h1 class="title">password generator</h1>
       <div class="output-container">
-        <output class="output">11072004</output>
+        <output class="output"></output>
         <button class="btn btn--copy" aria-label="copy generated password">
           Copy
         </button>

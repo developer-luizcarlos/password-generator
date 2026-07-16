@@ -1,8 +1,10 @@
 export const charsQuantityInput = document.querySelector(".input");
+export const confirmBtn = document.querySelector(".btn--confirm");
 export const generateBtn = document.querySelector(".btn--generate");
 export const labels = document.querySelectorAll(".label");
 export const lowercaseCheckbox = document.querySelector("#include-lowercase");
 export const numbersCheckbox = document.querySelector("#include-numbers");
+export const notification = document.querySelector(".notification");
 export const output = document.querySelector(".output");
 export const switches = document.querySelectorAll(".switch");
 export const symbolsCheckbox = document.querySelector("#include-symbols");

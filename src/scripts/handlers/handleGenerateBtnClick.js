@@ -6,26 +6,35 @@ import {
   symbolsCheckbox,
   uppercaseCheckbox,
 } from "../elements.js";
+import closeNotification from "../closeNotification.js";
 import generatePassword from "../generatePassword.js";
 import isAnyCheckboxChecked from "../utils/isAnyCheckboxChecked.js";
 import isCharsQuantityInRange from "../utils/isCharsQuantityInRange.js";
+import isNotificationOpened from "../isNotificationOpened.js";
+import showNotification from "../showNotification.js";
 
 const MIN = +charsQuantityInput.min;
 const MAX = +charsQuantityInput.max;
 
 export default function handleGenerateBtnClick() {
   if (!isAnyCheckboxChecked()) {
-    alert("Please, select at least one option");
+    showNotification("Please, select at least one option");
 
     return;
   }
 
   if (!isCharsQuantityInRange()) {
-    alert(`Please, set the password length a value between ${MIN} and ${MAX}`);
+    showNotification(
+      `Please, set the password length a value between ${MIN} and ${MAX}`,
+    );
 
     charsQuantityInput.focus();
 
     return;
+  }
+
+  if (isNotificationOpened()) {
+    closeNotification();
   }
 
   const length = +charsQuantityInput.value;
