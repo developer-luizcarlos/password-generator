@@ -9,6 +9,14 @@
 }
 
 @media only screen and (prefers-reduced-motion: no-preference) {
+  .switch {
+    transition: all 0.3s ease;
+  }
+
+  .thumb {
+    transition: all 0.3s ease;
+  }
+
   .notification--hidden {
     animation: hide 0.5s ease forwards;
   }
