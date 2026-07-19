@@ -148,7 +148,7 @@ input[type="checkbox"] {
 }
 
 .switch:has(input[type="checkbox"]:checked) .thumb {
-  left: 55px;
+  left: 65%;
 }
 
 .notification {

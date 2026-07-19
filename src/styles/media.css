@@ -18,3 +18,46 @@
     animation: show 0.5s ease forwards;
   }
 }
+
+@media only screen and (max-width: 456px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .generator {
+    min-width: 0;
+    width: 90vw;
+  }
+
+  .output-container {
+    width: 95%;
+  }
+
+  output {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .options-container {
+    width: 95%;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .input {
+    width: 70px;
+  }
+
+  .switch {
+    width: 70px;
+  }
+
+  .notification {
+    width: 90vw;
+  }
+}
