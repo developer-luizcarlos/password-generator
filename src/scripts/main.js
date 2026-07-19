@@ -1,11 +1,22 @@
-import { confirmBtn, generateBtn, labels, switches } from "./elements.js";
+import {
+  confirmBtn,
+  copyBtn,
+  generateBtn,
+  labels,
+  switches,
+} from "./elements.js";
 import handleConfirmBtnClick from "./handlers/handleConfirmBtnClick.js";
+import handleCopyBtnClick from "./handlers/handleCopyBtnClick.js";
 import handleGenerateBtnClick from "./handlers/handleGenerateBtnClick.js";
 import handleLabelClick from "./handlers/handleLabelClick.js";
 import handleSwitchClick from "./handlers/handleSwitchClick.js";
 
 if (confirmBtn) {
   confirmBtn.addEventListener("click", handleConfirmBtnClick);
+}
+
+if (copyBtn) {
+  copyBtn.addEventListener("click", handleCopyBtnClick);
 }
 
 if (generateBtn) {

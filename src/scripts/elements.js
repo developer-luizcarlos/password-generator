@@ -1,5 +1,6 @@
 export const charsQuantityInput = document.querySelector(".input");
 export const confirmBtn = document.querySelector(".btn--confirm");
+export const copyBtn = document.querySelector(".btn--copy");
 export const generateBtn = document.querySelector(".btn--generate");
 export const labels = document.querySelectorAll(".label");
 export const lowercaseCheckbox = document.querySelector("#include-lowercase");
