@@ -3,7 +3,7 @@
     background-color: #0dff67;
   }
 
-  .thumb:hover {
+  .switch:not(:has(input[type="checkbox"]:checked)) .thumb:hover {
     background-color: #0dff67;
   }
 }
