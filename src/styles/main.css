@@ -123,6 +123,7 @@ body {
   height: 35px;
   width: 85px;
   position: relative;
+  user-select: none;
 }
 
 .thumb {
